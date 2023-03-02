@@ -22,12 +22,13 @@ const SignUpForm = ({
       >
         <Form.Label>Photo</Form.Label>
         <Form.Control
+          value={details.photo}
           onChange={(event) => {
-            setDetails({ ...details, photo: event.target.files[0] });
+            setDetails({ ...details, photo: event.target.value });
           }}
           name="photo"
-          type="file"
-          accept=".png, .jpg, .jpeg"
+          type="text"
+          placeholder="Enter url"
         />
       </Form.Group>
       {/* Here is the name section, I used ternary to hide this section for the login page  */}

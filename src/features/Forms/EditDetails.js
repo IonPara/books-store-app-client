@@ -16,9 +16,10 @@ const EditDetails = ({
   signUp,
 }) => {
   const [details, setDetails] = useState({
-    photo: "",
-    name: "",
-    username: "",
+    photo: signUp.photo,
+    name: signUp.name,
+    username: signUp.username,
+    newUsername: signUp.username,
     password: "",
     confirmPassword: "",
   });
@@ -41,7 +42,6 @@ const EditDetails = ({
           setShowForm(false);
         }}
         className={showForm ? "signUp-form" : "hide"}
-        encType="multipart/form-data"
       >
         {/* Close icon */}
         <FontAwesomeIcon
@@ -55,12 +55,13 @@ const EditDetails = ({
         >
           <Form.Label>New Picture</Form.Label>
           <Form.Control
+            value={details.photo}
             onChange={(event) => {
-              setDetails({ ...details, photo: event.target.files[0] });
+              setDetails({ ...details, photo: event.target.value });
             }}
             name="photo"
-            type="file"
-            accept=".png, .jpg, .jpeg"
+            type="text"
+            placeholder="Enter url"
           />
         </Form.Group>
         {/* Here is the name section, I used ternary to hide this section for the login page  */}
@@ -86,9 +87,9 @@ const EditDetails = ({
         >
           <Form.Label>New email address</Form.Label>
           <Form.Control
-            value={details.username}
+            value={details.newUsername}
             onChange={(event) => {
-              setDetails({ ...details, username: event.target.value });
+              setDetails({ ...details, newUsername: event.target.value });
             }}
             className={showPassword ? "hide" : "mb-3"}
             required={!showPassword ? true : false}

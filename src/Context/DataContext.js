@@ -64,20 +64,15 @@ export const DataProvider = ({ children }) => {
   };
   // Fetch signup hook
   const fetchSignUp = async (e) => {
-    const { photo, name, username, password, confirmPassword } = signUp;
-    let userData = new FormData();
-    userData.set("photo", photo);
-    userData.set("name", name);
-    userData.set("username", username);
-    userData.set("password", password);
-    userData.set("confirmPassword", confirmPassword);
-    console.log(userData);
     try {
       //  Create the option to fetch
 
       const options = {
         method: "POST",
-        body: userData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(signUp),
       };
       e.preventDefault();
       // Fetch the data from the server
@@ -355,21 +350,14 @@ export const DataProvider = ({ children }) => {
   };
 
   const handleEdit = async (e, details, editPassword) => {
-    const { password, confirmPassword, name, username, photo } = details;
-    let userData = new FormData();
-    userData.set("photo", photo);
-    userData.set("name", name);
-    userData.set("username", signUp.username);
-    userData.set("newUsername", username);
-    userData.set("password", password);
-    userData.set("confirmPassword", confirmPassword);
     try {
       const options = {
         method: "PATCH",
         headers: {
-          token: token,
+          "Content-Type": "application/json",
+          token,
         },
-        body: userData,
+        body: JSON.stringify(details),
       };
       e.preventDefault();
       // Fetch the data from the server
