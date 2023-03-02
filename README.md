@@ -65,6 +65,7 @@ Runs the app in the development mode.
 
 Open http://localhost:3000 to view it in your browser.
 
+![just-read](https://user-images.githubusercontent.com/84988051/222515015-f555971a-1c79-47d5-9c65-b95def1ca825.png)
 
 ## ✉️ <a id="contact">Contact</a>:
 
