@@ -1,7 +1,7 @@
 {
   "name": "reduxreactapplication",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://just-read-server.onrender.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
