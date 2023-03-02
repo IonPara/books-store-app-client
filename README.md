@@ -48,9 +48,9 @@ The goal of this project is to showcase the ability to build and deploy a full s
 
 ## 📘 <a id="setup">Setup</a>:
 
-## You can visualise it by clicking on the link [here](https://just-read.onrender.com/)
+### You can visualise it by clicking on the link [here](https://just-read.onrender.com/)
 
-## Or by following these steps :point_down:
+### Or by following these steps :point_down:
 
 1. [Download client side zip file](https://github.com/IonPara/books-store-app-client/archive/refs/heads/main.zip)
 2. [Download server zip file](https://github.com/IonPara/books-store-app-server/archive/refs/heads/main.zip)
