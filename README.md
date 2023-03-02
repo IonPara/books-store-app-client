@@ -7,7 +7,7 @@
 - [Contact](#contact)
 
  ## 📑 General Information:
-This repository is the front end of a full stack MERN application.
+This repository is the backend of a full stack MERN application.
 Just Read is a book store app where the user can create an account, search for his/her favorite books, purchase a book and leave a review.
 The app has two types of users, admin and a regular user, the admin can add and remove popular books from the main page.
 The goal of this project is to showcase the ability to build and deploy a full stack application. 
@@ -36,17 +36,20 @@ The goal of this project is to showcase the ability to build and deploy a full s
 
 ## 📘 <a id="setup">Setup</a>:
 
-1. [Download Zip file](https://github.com/IonPara/Todo-app/archive/refs/heads/master.zip)
-2. [Download **Node.js**](https://nodejs.org/dist/v18.13.0/node-v18.13.0-x64.msi)
-3. Navigate to project's server directory, run: **npm install** **npm start**
-4. Navigate to project's client directory, run: **npm install** **npm start**
+## You can visualise it by clicking on the link [here](https://just-read.onrender.com/)
+
+## Or by following these steps :point_down:
+
+1. [Download client side zip file](https://github.com/IonPara/books-store-app-client/archive/refs/heads/main.zip)
+2. [Download server zip file](https://github.com/IonPara/books-store-app-server/archive/refs/heads/main.zip)
+3. [Download **Node.js**](https://nodejs.org/dist/v18.13.0/node-v18.13.0-x64.msi)
+4. Navigate to project's books-store-app-server directory, run: **npm install** **npm start**
+5. Navigate to project's books-store-app-client directory, run: **npm install** **npm start**
 
 
 Runs the app in the development mode.
 
 Open http://localhost:3000 to view it in your browser.
-
-## Or you can visualise it by clicking on the link [here](https://just-read.onrender.com/)
 
 
 ## ✉️ <a id="contact">Contact</a>:
