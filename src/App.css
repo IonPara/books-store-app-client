@@ -305,7 +305,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 110rem;
-    min-height: 400px;
+    min-height: 600px;
     margin: 10px auto;
     background-color: rgb(245, 245, 245);
   }
