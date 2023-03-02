@@ -1,4 +1,4 @@
-# Just Read
+# Just Read - Client Side
 
 📃 **Content:**
 - [General Information ](#General-Information)
