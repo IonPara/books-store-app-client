@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-centered {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+
+  .header-container {
+    background-color:rgba(0, 21, 36, .8);
+    max-height: 10rem;
+    position: fixed;
+    z-index: 100;
+    top: -2px;
+    width: 100%;
+    color:white;
+
+  }
+
+  .menu {
+    position: fixed;
+    background-color: #001524;
+    align-items:center;
+    top: 1px;
+    min-height: 150px;
+    width: 12rem;
+    border-bottom-right-radius: 80px 80px;
+  }
+
+  .menu form {
+    max-width: 145px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5rem;
+  }
+    
+  label {
+    height: 35px;
+    font-weight: 600;
+  }
+
+  .input {
+    font-size: 1.2rem;
+    max-width: 9rem ;
+    color:black;
+    /* border: 2px solid red; */
+  }
+  .input-container{
+    position: relative;
+  }
+
+  .search-icon {
+    position: absolute;
+    color: rgb(100, 96, 96);
+    left:92%;
+    top: 10px;
+    font-size: 1.7rem;
+  }
+
+  .menu .menu-bars {
+    margin-left: 200%;
+  }
+
+  .menu-bars {
+    margin-left: .5rem;
+    font-size: 2rem;
+    /* border: 2px solid red; */
+
+  }
+
+  .basket-items {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color:#001524;
+    min-width: 10rem;
+    border-radius: 10px;
+    max-width: 20rem;
+  }
+
+  .number-of-books {
+    position: absolute;
+    background-color: red;
+    font-weight: 900;
+    right: 1.5rem;
+    border-radius: 50%;
+    top: 2.4rem;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+  }
+  span {
+    font-size: .8rem;
+  }
+
+  .proceed-btn {
+    width: 100%;
+  }
+
+
+  .user-main{
+    height: 100svh;
+  }
+
+  .user-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .user-photo img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    
+  }
+
+  .user-details {
+    width: 20rem;
+    height: 35rem;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    border-radius: 20px;
+  }
+
+  .user-buttons {
+    /* border: 1px solid black; */
+    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+  }
+
+  .user-details ul {
+    max-width: 100px;
+  }
+
+  .user-details-item {
+    border-bottom: 1px solid rgb(178, 175, 175);
+    min-width: 11rem;
+    margin-top: 5px;
+  }
+
+  .orders {
+    width: 60rem;
+    height: 35rem;
+    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    border-radius: 20px;
+    overflow-y: scroll;
+  }
+
+  .orders-item-image {
+    width: 100px;
+    height: 120px;
+  }
+
+  .orders-item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .orders-table {
+    width: 100%;
+  }
+  
+  .orders-table th {
+    vertical-align:top;
+    width: calc(100% / 7);
+
+  }
+
+  @media screen and (max-width: 700px) {
+    .user-main  {
+      flex-wrap: wrap;
+    }
+
+    .orders,.user-details  {
+      min-height: 100%;
+      box-shadow: none;
+      overflow-y:visible;
+    }
+
+    .orders-item-image {
+      max-width: 80px;
+      max-height: 100px;
+    }
+    .orders-table {
+      font-size: .9rem;
+      max-width: 100%;
+    }
+
+    .orders-table thead th {
+      font-size: 1rem ;
+    }
+  }
+
+  /* .orders-table .title {
+  } */
+
+  .user-books-container {
+    flex-wrap: wrap;
+  }
+
+  .user-books-container .book-card {
+    width: 10rem;
+    position: relative;
+    color:white;
+    margin: 2rem;
+  }
+
+  .user-books-container .card-body {
+    display: none;
+  }
+
+  .change-password {
+    line-height: 100%;
+  }
+
+  .orders ul {
+    border-bottom: 2px solid black;
+  }
+
+  .edit-details form{
+    background-color: white;
+  }
+
+  .image {
+    width: 100%;
+    background-image: url('./images/books.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    height: 400px;
+  }
+
+  .search-container {
+    background-color:rgba(0, 21, 36, .5);
+    width: 100%;
+    height: 100%;
+  }
+
+  .search-container .input {
+    min-width: 30rem ;
+    height: 3rem;
+    border-radius: 20px;
+    opacity: .8;
+    padding: 20px;
+  }
+
+  .search-container label {
+    font-size: 30px;
+    color: white;
+    margin: 10px auto;
+  }
+
+  @media screen and (max-width: 700px) {
+    .search-container #input  {
+      display: block;
+      min-width: 350px !important;
+    }
+  }
+
+  .nav-element {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+
+  .nav {
+    margin-right: 1rem;
+  }
+
+  .nav-element:hover{
+    color: black;
+  }
+
+  .nav-list {
+    align-items: flex-end;
+    margin-bottom: 0;
+
+  }
+
+  .books-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 110rem;
+    min-height: 400px;
+    margin: 10px auto;
+    background-color: rgb(245, 245, 245);
+  }
+
+  .card-container {
+    min-height: 16rem;
+    max-height: 16rem;
+    width: 11rem;
+    margin: 1.2rem;
+
+  }
+
+  .card-image {
+    width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+  }
+
+  .book-card {
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgb(14, 13, 13) !important;
+    border-bottom-right-radius: 40px 40px !important;
+    min-height: 100%;
+    position: relative;
+    color:white;
+    padding: 10px;
+
+  }
+  .card-title {
+    font-size: .9rem !important;
+  }
+
+
+  .card-body {
+    position: absolute;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px) ;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: .9rem;
+  }
+
+  .book-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .book-details-container {
+    color: white;
+    position: fixed;
+    width: 70%;
+    height: 90dvh;
+    background-color:#101111;
+    opacity: .95;
+    border-radius: 10px;
+    z-index: 100;
+    padding: 50px;
+    top: 9%;
+    left: 15%;
+    overflow-y: scroll;
+  }
+
+  .book-details-inner-container {
+    background-color:#5bccf6;
+    
+  }
+
+  .textarea {
+    width: 60%;
+    min-height: 100px;
+    border-radius: 10px;
+    
+  }
+
+  .comment {
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+  }
+
+  .review-name {
+    font-weight: 600;
+    font-size: large;
+  }
+
+  @media screen and (max-width: 900px) {
+    .book-details-container {
+      width: 90%;
+      left: 5%;
+    }
+
+    .book-description, .review-container {
+      padding: 0px;
+      margin-inline: 2px;
+    }
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .book-details-and-image-container {
+        flex-direction: column;
+      }
+
+      .book-details-image-container {
+        margin-left:20%;
+        margin-bottom: 20px;
+      }
+
+
+      .comment-form {
+        min-width: 200px;
+        margin-left: 1px !important;
+      }
+
+      .textarea {
+        width: 100%;
+      }
+
+      .book-details-container {
+        width: 100%;
+        left: 0%;
+      }
+  
+      }
+
+  
+  .border-radius {
+    border-radius:20px;
+    /* background-color: whitesmoke; */
+  }
+
+  .border-bottom-h {
+    border-bottom: 2px solid white;
+  }
+
+  .basket:hover, .menu-bars:hover, .logo:hover, .my-profile:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .checkout {
+    min-height: 75dvh;
+  }
+  .checkout-list {
+    min-height: 20rem;
+    border: 2px solid rgba(0, 21, 36, .5);
+    box-shadow: 0 10px 25px 0 rgba(7, 175, 236, 0.15), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    border-radius:20px;
+    margin: auto;
+    margin-top: 10%;
+    max-width: 40%;
+  }
+
+  .checkout-item{
+    border-bottom: 1px solid black;
+    padding: 5px;
+  }
+
+  .quantity-price-container {
+    min-width: 11rem;
+    max-width: 11rem;
+  }
+
+  .pay-button {
+    margin-left: 70%;
+    min-width: 150px;
+  }
+
+  @media screen and (max-width: 1210px ) {
+    .pay-button {
+      margin-left: 60%;
+      min-width: 120px;
+    }
+  }
+
+  @media screen and (max-width: 900px ) {
+    .pay-button {
+      margin-left: 20%;
+
+    }
+  }
+
+  @media screen and (max-width: 620px ) {
+    .pay-button {
+      margin-left: 10%;
+
+    }
+
+    .checkout-list {
+      min-width: 300px;
+    }
+  }
+
+
+  .list {
+    min-width: 200px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .close-icon {
+    font-size: 1.5rem;
+    margin-left: 90%;
+  }
+
+  .signUp-form {
+    max-width: 450px;
+    margin:50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    /* background-color: rgba(61,149,143,255); */
+  }
+
+  .signUp {
+    min-height: 86dvh;
+  }
+
+  .login {
+    min-height: 86dvh;
+  }
+
+  h1, h2 {
+    text-align: center;
+    max-width: 400px;
+    font-size: 3rem;
+    margin: auto;
+    margin-top: 80px !important;
+  }
+
+  .alert {
+    width: 500px;
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    padding-top: 10px;
+    padding: 10px;
+
+  }
+  
+  .list-element {
+    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    max-width: 60%;
+    border-radius: 10px;
+    margin: auto;
+    font-size: larger;
+    font-weight: 600;
+  
+  }
+
+  .removeItem {
+    height: 100%;
+
+  }
+
+  .button {
+    margin: 5px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .checkbox {
+    height: .9em;
+    width: .9em;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .footer {
+    background-color:rgba(0, 21, 36, .8);
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .footer-header {
+    max-width: 200px;
+    color: white;
+    margin: auto;
+    padding-top: 10px;
+  }
+
