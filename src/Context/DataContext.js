@@ -40,7 +40,10 @@ export const DataProvider = ({ children }) => {
       e.preventDefault();
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("/users/login", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/users/login",
+        options
+      );
       if (!response.ok) throw Error("Did not receive the expected data");
       // Convert the data from json
       const data = await response.json();
@@ -79,7 +82,10 @@ export const DataProvider = ({ children }) => {
       e.preventDefault();
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("users/signUp", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/users/signUp",
+        options
+      );
       if (!response.ok) throw Error("Something went wrong");
       // Convert the data from json
       const data = await response.json();
@@ -113,7 +119,10 @@ export const DataProvider = ({ children }) => {
         // Fetch the data from the server
         // If the response is not ok throw the error
         if (token) {
-          const response = await fetch(`/users/${signUp.username}`, options);
+          const response = await fetch(
+            `https://just-read-server.onrender.com/users/${signUp.username}`,
+            options
+          );
           if (!response.ok) throw Error("Did not receive the expected data");
           // Convert the data from json
           const data = await response.json();
@@ -181,7 +190,10 @@ export const DataProvider = ({ children }) => {
       e.preventDefault();
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("/books/addBook", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/books/addBook",
+        options
+      );
       if (!response.ok) throw Error("Something went wrong");
       // Convert the data from json
       const data = await response.json();
@@ -204,7 +216,10 @@ export const DataProvider = ({ children }) => {
         };
         // Fetch the data from the server
         // If the response is not ok throw the error
-        const response = await fetch(`/books/getBooks`, options);
+        const response = await fetch(
+          `https://just-read-server.onrender.com/books/getBooks`,
+          options
+        );
         if (!response.ok) throw Error("Did not receive the expected data");
         // Convert the data from json
         const data = await response.json();
@@ -261,7 +276,10 @@ export const DataProvider = ({ children }) => {
       };
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("/books/addReview", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/books/addReview",
+        options
+      );
       if (!response.ok) throw Error("Something went wrong");
       // Convert the data from json
       const data = await response.json();
@@ -292,7 +310,10 @@ export const DataProvider = ({ children }) => {
       };
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("/users/order", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/users/order",
+        options
+      );
       if (!response.ok) throw Error("Something went wrong");
       // Convert the data from json
       const data = await response.json();
@@ -320,7 +341,10 @@ export const DataProvider = ({ children }) => {
       };
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch("/books/delete", options);
+      const response = await fetch(
+        "https://just-read-server.onrender.com/books/delete",
+        options
+      );
       if (!response.ok) throw Error("Something went wrong");
       // Convert the data from json
       const data = await response.json();
@@ -351,7 +375,9 @@ export const DataProvider = ({ children }) => {
       // Fetch the data from the server
       // If the response is not ok throw the error
       const response = await fetch(
-        `/users/${editPassword ? "changePassword" : "changeDetails"}`,
+        `https://just-read-server.onrender.com/users/${
+          editPassword ? "changePassword" : "changeDetails"
+        }`,
         options
       );
       if (!response.ok) throw Error("Something went wrong");
