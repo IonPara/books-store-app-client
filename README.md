@@ -7,7 +7,7 @@
 - [Contact](#contact)
 
  ## 📑 General Information:
-This repository is the backend of a full stack MERN application.
+This repository is thefront end of a full stack MERN application.
 Just Read is a book store app where the user can create an account, search for his/her favorite books, purchase a book and leave a review.
 The application allows for normal end-user access and admin access. An administrator can monitor and make changes to user's behaviour.
 
