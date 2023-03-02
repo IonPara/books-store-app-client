@@ -1,4 +1,4 @@
-# Just Read - Client Side
+# [Just Read](https://just-read.onrender.com/) - Client Side
 
 📃 **Content:**
 - [General Information ](#General-Information)
@@ -21,7 +21,7 @@ The app is built using MongoDB, Express, React, and Node.js (the MERN stack).<br
 <pre>● The app authenticates users using JWT to safely transmit the information between client and server.
 ● The API keys are saved as environment variables.</pre> 
 
-:floppy_disk: The app was deployed on [render.com]([render.com](https://render.com/))
+:floppy_disk: The app was deployed on [render.com]([render.com](https://render.com/)
  <pre>  Back-end and front-end separately to make the app safer and easier to debug.</pre>
 
 The goal of this project is to showcase the ability to build and deploy a full stack application. 
