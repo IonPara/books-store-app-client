@@ -13,12 +13,14 @@ import { useSelector } from "react-redux";
 // This is the header component
 const Header = () => {
   // Import all of the states from the DataContext
-  const { basketItems, setBasketItems, setBooksList } = useContext(DataContext);
+  const { basketItems, setBasketItems, setBooksList, fetchPopBooks } =
+    useContext(DataContext);
 
   const [menu, setMenu] = useState(false);
   const [basket, setBasket] = useState(false);
   // import the redux state
   const loggedIn = useSelector((state) => state.books.loggedIn);
+  const popularBooks = useSelector((state) => state.books.popularBooks);
   const navigate = useNavigate();
 
   return (
@@ -35,6 +37,7 @@ const Header = () => {
         onClick={() => {
           navigate("/");
           setBooksList([]);
+          if (!popularBooks[0].length) fetchPopBooks();
         }}
       >
         <h3 className="logo">JustRead</h3>
