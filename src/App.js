@@ -17,17 +17,19 @@ function App() {
   return (
     <div className="app-container">
       <DataProvider>
-        <Header />
-        {/* Create the routes */}
-        <Routes>
-          {/* The route to the login and todo pages depending on the loggedIn state */}
-          <Route path={"/"} element={<Main />} />
-          {/* The route to the signup page */}
-          <Route path="signUp" element={<SignUp />} />
-          {loggedIn ? <Route path="user" element={<User />} /> : ""}
-          <Route path="login" element={<Login />} />
-          <Route path="checkout" element={<Checkout />} />
-        </Routes>
+        <div className="app-container2 ">
+          <Header />
+          {/* Create the routes */}
+          <Routes>
+            {/* The route to the login and todo pages depending on the loggedIn state */}
+            <Route path={"/"} element={<Main />} />
+            {/* The route to the signup page */}
+            <Route path="signUp" element={<SignUp />} />
+            {loggedIn ? <Route path="user" element={<User />} /> : ""}
+            <Route path="login" element={<Login />} />
+            <Route path="checkout" element={<Checkout />} />
+          </Routes>
+        </div>
         <Footer />
       </DataProvider>
     </div>

@@ -3,6 +3,8 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import BookDetails from "./BookDetails";
+import { useSelector, useDispatch } from "react-redux";
+import { setShowBook } from "../booksReducer";
 
 // Book card component
 function BookCard({
@@ -14,7 +16,10 @@ function BookCard({
   handleDelete,
 }) {
   const [showCard, setShowCard] = useState("");
-  const [showBook, setShowBook] = useState("");
+  // const [showBook, setShowBook] = useState("");
+  const showBook = useSelector((state) => state.books.showBook);
+
+  const dispatch = useDispatch();
   // Books container
   // For every book in the list, create a card
   return booksList.length && booksList[0] !== undefined
@@ -46,7 +51,9 @@ function BookCard({
                   src={thumbnail}
                 />
                 <Card.Body
-                  onClick={() => setShowBook(book.id)}
+                  onClick={() => {
+                    dispatch(setShowBook(book.id));
+                  }}
                   key={index + 300}
                   className={showCard === book.id ? "card-body" : "hide"}
                 >
@@ -62,7 +69,6 @@ function BookCard({
                 key={"123" + book.id}
                 book={book}
                 showBook={showBook}
-                setShowBook={setShowBook}
                 basketItems={basketItems}
                 setBasketItems={setBasketItems}
                 addBook={addBook}

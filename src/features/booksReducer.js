@@ -14,6 +14,7 @@ export const booksSlice = createSlice({
     popularBooks: [[]],
     myBooks: [],
     quantity: 1,
+    showBook: "",
   },
 
   // Here are the reducers that we will use to manipulate the initial state
@@ -97,6 +98,9 @@ export const booksSlice = createSlice({
     setMyBooks: (state, action) => {
       state.user.ordered.push(action.payload);
     },
+    setShowBook: (state, action) => {
+      state.showBook = action.payload;
+    },
   },
 });
 
@@ -110,6 +114,7 @@ export const {
   setMyBooks,
   setUsername,
   removeBook,
+  setShowBook,
 } = booksSlice.actions;
 
 // Export counterSlice reducer

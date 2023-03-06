@@ -4,6 +4,7 @@ import Search from "../features/Components/Search";
 import { useContext } from "react";
 import DataContext from "../Context/DataContext";
 import { useSelector } from "react-redux";
+import SyncLoader from "react-spinners/SyncLoader";
 
 // This is the to do page
 const Main = () => {
@@ -17,6 +18,8 @@ const Main = () => {
     addBook,
     addReview,
     handleDelete,
+    isLoading,
+    setIsLoading,
   } = useContext(DataContext);
   const popularBooks = useSelector((state) => state.books.popularBooks);
   return (
@@ -32,8 +35,19 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <main className="books-container ">
-        {
+      <main
+        className={isLoading ? "bg-white books-container" : "books-container"}
+      >
+        {isLoading ? (
+          <SyncLoader
+            className="mt-auto mb-auto "
+            color={"#0597AF"}
+            loading={isLoading}
+            size={25}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        ) : (
           <BookCard
             basketItems={basketItems}
             setBasketItems={setBasketItems}
@@ -41,12 +55,14 @@ const Main = () => {
               (booksList.length && booksList[0]) || !popularBooks[0].length
                 ? booksList
                 : popularBooks
+                ? popularBooks
+                : setIsLoading(true)
             }
             addBook={addBook}
             addReview={addReview}
             handleDelete={handleDelete}
           />
-        }
+        )}
       </main>
     </>
   );

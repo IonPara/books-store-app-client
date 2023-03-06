@@ -16,11 +16,10 @@ export const DataProvider = ({ children }) => {
   // Create the needed states
   const [token, setToken] = useState("");
   const [signUp, setSignUp] = useState(user);
-  const [input, setInput] = useState("");
   const [basketItems, setBasketItems] = useState([]);
   const [searchBook, setSearchBook] = useState("");
   const [booksList, setBooksList] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   // Use the redux state
   const userDetails = useSelector((state) => state.books.user);
 
@@ -139,6 +138,8 @@ export const DataProvider = ({ children }) => {
     const API_KEY = process.env.REACT_APP_API_KEY;
     try {
       e.preventDefault();
+      setIsLoading(true);
+
       // Fetch the data from the server
       // If the response is not ok throw the error
       const response = await fetch(
@@ -147,7 +148,10 @@ export const DataProvider = ({ children }) => {
       if (!response.ok) throw Error("Did not receive the expected data");
       // Convert the data from json
       const data = await response.json();
-      if (data) setBooksList([data.items]);
+      setIsLoading(false);
+      if (data) {
+        setBooksList([data.items]);
+      }
       // Catch the error
     } catch (error) {
       console.log(error);
@@ -209,6 +213,7 @@ export const DataProvider = ({ children }) => {
             "Content-Type": "application/json",
           },
         };
+        setIsLoading(true);
         // Fetch the data from the server
         // If the response is not ok throw the error
         const response = await fetch(
@@ -223,6 +228,7 @@ export const DataProvider = ({ children }) => {
             data.forEach((element) => {
               dispatch(addPopBook(element));
             });
+            setIsLoading(false);
           }
         } else {
           alert(data.message);
@@ -381,8 +387,6 @@ export const DataProvider = ({ children }) => {
         addReview,
         basketItems,
         setBasketItems,
-        input,
-        setInput,
         addBook,
         handleDelete,
         handleEdit,
@@ -396,6 +400,8 @@ export const DataProvider = ({ children }) => {
         booksList,
         setBooksList,
         orderBook,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}
