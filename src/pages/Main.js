@@ -54,7 +54,7 @@ const Main = () => {
             booksList={
               (booksList.length && booksList[0]) || !popularBooks[0].length
                 ? booksList
-                : popularBooks
+                : popularBooks[0].length
                 ? popularBooks
                 : setIsLoading(true)
             }

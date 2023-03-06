@@ -202,45 +202,45 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const fetchPopBooks = async () => {
+    try {
+      //  Create the option for fetch
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      setIsLoading(true);
+      // Fetch the data from the server
+      // If the response is not ok throw the error
+      const response = await fetch(
+        `https://just-read-server.onrender.com/books/getBooks`,
+        options
+      );
+      if (!response.ok) throw Error("Did not receive the expected data");
+      // Convert the data from json
+      const data = await response.json();
+      if (data) {
+        if (!data.message) {
+          data.forEach((element) => {
+            dispatch(addPopBook(element));
+          });
+          setIsLoading(false);
+        }
+      } else {
+        alert(data.message);
+      }
+
+      // Catch the error
+    } catch (error) {
+      console.log(error);
+    }
+  };
   // Use useEffect hook to render only when the state updates
   useEffect(() => {
-    const fetchPopBooks = async () => {
-      try {
-        //  Create the option for fetch
-        const options = {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        };
-        setIsLoading(true);
-        // Fetch the data from the server
-        // If the response is not ok throw the error
-        const response = await fetch(
-          `https://just-read-server.onrender.com/books/getBooks`,
-          options
-        );
-        if (!response.ok) throw Error("Did not receive the expected data");
-        // Convert the data from json
-        const data = await response.json();
-        if (data) {
-          if (!data.message) {
-            data.forEach((element) => {
-              dispatch(addPopBook(element));
-            });
-            setIsLoading(false);
-          }
-        } else {
-          alert(data.message);
-        }
-
-        // Catch the error
-      } catch (error) {
-        console.log(error);
-      }
-    };
     fetchPopBooks();
-  }, [dispatch]);
+  }, []);
 
   const addReview = async (e, book, comment) => {
     e.preventDefault();
@@ -395,6 +395,7 @@ export const DataProvider = ({ children }) => {
         fetchSignUp,
         fetchLogin,
         fetchBooks,
+        fetchPopBooks,
         searchBook,
         setSearchBook,
         booksList,
