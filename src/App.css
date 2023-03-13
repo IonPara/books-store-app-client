@@ -378,6 +378,15 @@
     overflow-y: scroll;
   }
 
+  .book-details-container::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .book-details-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   .close-book-details-container{
     min-width: 100%;
     min-height: 100dvh;
