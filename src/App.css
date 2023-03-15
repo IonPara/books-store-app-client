@@ -309,7 +309,7 @@
 
   .books-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     max-width: 110rem;
     margin: auto;
