@@ -40,7 +40,7 @@ const Header = () => {
           if (!popularBooks[0].length) fetchPopBooks();
         }}
       >
-        <h3 className="logo">JustRead</h3>
+        <h3 className={!loggedIn ? "logo" : "logo-logged"}>JustRead</h3>
       </span>
       {/* Here I used ternary to display the welcome when the user has logged in*/}
       <nav className="nav">

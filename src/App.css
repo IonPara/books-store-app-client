@@ -42,6 +42,16 @@
 
   }
 
+  .logo {
+    margin-left: 100%;
+    margin-top: 10%;
+  }
+
+  .logo-logged {
+    margin-left: 50%;
+  }
+
+
   .menu {
     position: fixed;
     background-color: #001524;
@@ -298,7 +308,7 @@
   }
 
   .nav-element:hover{
-    color: black;
+    color: rgb(28, 132, 176);
   }
 
   .nav-list {
@@ -448,7 +458,8 @@
       }
 
       .book-details-image-container {
-        margin-left:20%;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 20px;
       }
 
@@ -468,6 +479,22 @@
       }
   
       }
+
+      @media screen and (max-width: 450px) {
+        .logo {
+          margin-left: 50%;
+        }
+
+        .card-container {
+          min-height: 12rem;
+          max-height: 12rem;
+          max-width: 9rem;
+        }   
+        .card-image {
+          height: 12rem;
+        }
+    
+        }
 
   
   .border-radius {

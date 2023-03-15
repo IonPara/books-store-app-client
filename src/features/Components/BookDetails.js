@@ -103,7 +103,7 @@ const BookDetails = ({
             <div className="book-details-image-container ml-auto w-44 h-70 p-1 bd-dark">
               <img className="card-image" src={thumbnail} alt="thumbnail"></img>
             </div>
-            <div className="ml-10 mt-auto mr-auto max-w-lg">
+            <div className="ml-auto mt-auto mr-auto max-w-lg">
               <h4>{title}</h4>
               <p>{author}</p>
               <div className="bg-white opacity-90 text-black border-radius">
