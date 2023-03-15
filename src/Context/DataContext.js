@@ -13,7 +13,7 @@ let user = {
   confirmPassword: "",
 };
 
-const URL = "https://just-read-app-server.herokuapp.com/";
+const URL = "https://just-read-app-server.herokuapp.com";
 
 export const DataProvider = ({ children }) => {
   // Create the needed states
@@ -208,7 +208,7 @@ export const DataProvider = ({ children }) => {
       setIsLoading(true);
       // Fetch the data from the server
       // If the response is not ok throw the error
-      const response = await fetch(`${URL}books/getBooks`, options);
+      const response = await fetch(`${URL}/books/getBooks`, options);
       if (!response.ok) throw Error("Did not receive the expected data");
       // Convert the data from json
       const data = await response.json();

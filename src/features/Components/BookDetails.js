@@ -96,7 +96,7 @@ const BookDetails = ({
             icon={faSquareXmark}
           />
           <div className="book-details-and-image-container d-flex ">
-            <div className="book-details-image-container ml-auto w-44 h-70 p-2 bg-white">
+            <div className="book-details-image-container ml-auto w-44 h-70 p-1 bd-dark">
               <img className="card-image" src={thumbnail} alt="thumbnail"></img>
             </div>
             <div className="ml-10 mt-auto mr-auto max-w-lg">
