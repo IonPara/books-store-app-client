@@ -403,6 +403,11 @@
     
   }
 
+  .book-details-image-container {
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
   .textarea {
     width: 60%;
     min-height: 100px;

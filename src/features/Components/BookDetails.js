@@ -73,17 +73,21 @@ const BookDetails = ({
   };
 
   return (
-    <div>
+    <div className="">
       <div
         onClick={() => {
           dispatch(setShowBook(""));
         }}
         className={
-          showBook === book.id ? "close-book-details-container" : "hide"
+          showBook === book.id ? "close-book-details-container  " : "hide"
         }
       ></div>
       <div
-        className={showBook === book.id ? " book-details-container" : "hide"}
+        className={
+          showBook === book.id
+            ? " book-details-container animate__animated animate__fadeIn"
+            : "hide"
+        }
       >
         <div className="">
           {/* this is the x icon that will remove the book from the basket */}
@@ -100,7 +104,7 @@ const BookDetails = ({
               <img className="card-image" src={thumbnail} alt="thumbnail"></img>
             </div>
             <div className="ml-10 mt-auto mr-auto max-w-lg">
-              <h3>{title}</h3>
+              <h4>{title}</h4>
               <p>{author}</p>
               <div className="bg-white opacity-90 text-black border-radius">
                 <ul>

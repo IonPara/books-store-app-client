@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 // Import the "store" component that we created in the "store" folder
 import store from "../src/store/store";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // Implement the Provider component and pass "store" as one of its properties
