@@ -8,7 +8,7 @@ const SignUp = () => {
 
   return (
     <div className="signUp">
-      <h2 className="text-dark sign-up-heading text-3xl font-bold ">
+      <h2 className="text-dark sign-up-heading text-3xl mt-5 text-center  ">
         Please Sign Up
       </h2>
       {/* Here I add the sign up form component */}

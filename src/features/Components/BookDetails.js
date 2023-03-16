@@ -103,10 +103,10 @@ const BookDetails = ({
             <div className="book-details-image-container ml-auto w-44 h-70 p-1 bd-dark">
               <img className="card-image" src={thumbnail} alt="thumbnail"></img>
             </div>
-            <div className="ml-auto mt-auto mr-auto max-w-lg">
+            <div className="ml-auto mt-auto mr-auto title-container">
               <h4>{title}</h4>
               <p>{author}</p>
-              <div className="bg-white opacity-90 text-black border-radius">
+              <div className="bg-white price-container opacity-90 text-black border-radius">
                 <ul>
                   <li>Price: £{(price * quantity).toFixed(2)}</li>
                   <li>

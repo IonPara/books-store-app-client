@@ -23,6 +23,10 @@
     align-items: flex-start;
   }
 
+  .app-container {
+    min-height: 100dvh;
+  }
+
   .app-container2 {
     display: flex;
     flex-direction: column;
@@ -32,34 +36,34 @@
  
 
   .header-container {
-    background-color:rgba(0, 21, 36, .8);
-    max-height: 10rem;
+    background-color: whitesmoke;
+    max-height: 60px;
     position: fixed;
     z-index: 100;
     top: -2px;
     width: 100%;
-    color:white;
+    color:black;
 
   }
 
   .logo {
-    margin-left: 100%;
+    margin-left: 80%;
     margin-top: 10%;
   }
 
   .logo-logged {
-    margin-left: 50%;
+    margin-left: 30%;
   }
 
 
   .menu {
     position: fixed;
-    background-color: #001524;
+    background-color:rgb(238, 242, 245);
     align-items:center;
     top: 1px;
     min-height: 150px;
     width: 12rem;
-    border-bottom-right-radius: 80px 80px;
+    border-bottom-right-radius: 10px;
   }
 
   .menu form {
@@ -78,7 +82,7 @@
     font-size: 1.2rem;
     max-width: 9rem ;
     color:black;
-    /* border: 2px solid red; */
+ 
   }
   .input-container{
     position: relative;
@@ -99,7 +103,6 @@
   .menu-bars {
     margin-left: .5rem;
     font-size: 2rem;
-    /* border: 2px solid red; */
 
   }
 
@@ -107,7 +110,7 @@
     position: absolute;
     top: 3rem;
     right: 3rem;
-    background-color:#001524;
+    background-color:#d1d5d8;
     min-width: 10rem;
     border-radius: 10px;
     max-width: 20rem;
@@ -135,7 +138,7 @@
 
 
   .user-main{
-    height: 100svh;
+    min-height: 100dvh;
   }
 
   .user-photo {
@@ -156,13 +159,14 @@
     height: 35rem;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
     border-radius: 20px;
+    border: 1px solid grey;
+    background-color: whitesmoke;
   }
 
   .user-buttons {
-    /* border: 1px solid black; */
-    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    min-width: 100%;
+    text-align: left;
   }
 
   .user-details ul {
@@ -170,17 +174,20 @@
   }
 
   .user-details-item {
-    border-bottom: 1px solid rgb(178, 175, 175);
-    min-width: 11rem;
+    border-bottom: 1px dashed rgb(178, 175, 175);
+    min-width: 80%;
     margin-top: 5px;
+    text-align: left;
+    margin-left: 10px;
   }
 
   .orders {
     width: 60rem;
     height: 35rem;
-    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
     border-radius: 20px;
     overflow-y: scroll;
+    border: 1px solid grey;
+    background-color: whitesmoke;
   }
 
   .orders-item-image {
@@ -203,35 +210,7 @@
     width: calc(100% / 7);
 
   }
-
-  @media screen and (max-width: 700px) {
-    .user-main  {
-      flex-wrap: wrap;
-    }
-
-    .orders,.user-details  {
-      min-height: 100%;
-      box-shadow: none;
-      overflow-y:visible;
-    }
-
-    .orders-item-image {
-      max-width: 80px;
-      max-height: 100px;
-    }
-    .orders-table {
-      font-size: .9rem;
-      max-width: 100%;
-    }
-
-    .orders-table thead th {
-      font-size: 1rem ;
-    }
-  }
-
-  /* .orders-table .title {
-  } */
-
+ 
   .user-books-container {
     flex-wrap: wrap;
   }
@@ -247,10 +226,6 @@
     display: none;
   }
 
-  .change-password {
-    line-height: 100%;
-  }
-
   .orders ul {
     border-bottom: 2px solid black;
   }
@@ -261,15 +236,17 @@
 
   .image {
     width: 100%;
-    background-image: url('./images/books.jpg');
+    background-image: url('./images/books3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
     height: 400px;
   }
 
+
+
   .search-container {
-    background-color:rgba(0, 21, 36, .5);
+    background-color:rgba(52, 50, 50, 0.262);
     width: 100%;
     height: 100%;
   }
@@ -278,29 +255,24 @@
     min-width: 30rem ;
     height: 3rem;
     border-radius: 20px;
-    opacity: .8;
     padding: 20px;
+    background-color: rgb(239, 235, 235);
   }
 
   .search-container label {
     font-size: 30px;
     color: white;
     margin: 10px auto;
-  }
-
-  @media screen and (max-width: 700px) {
-    .search-container #input  {
-      display: block;
-      min-width: 350px !important;
-    }
+    background-color:#101111;
+    padding-inline: 10px;
+    border-radius: 5px;
   }
 
   .nav-element {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color:black;
     text-decoration: none;
-    padding-left: 10px;
   }
 
   .nav {
@@ -377,15 +349,14 @@
   .book-details-container {
     color: white;
     position: fixed;
-    width: 70%;
-    height: 90dvh;
-    background-color:#101111;
-    opacity: .95;
+    width: 60%;
+    height: calc(100dvh - 60px);
+    background-color:#1E1E1E ;
     border-radius: 10px;
     z-index: 100;
-    padding: 50px;
-    top: 9%;
-    left: 15%;
+    padding: 20px 0 20px 0;
+    top: 50px;
+    left: 20%;
     overflow-y: scroll;
   }
 
@@ -416,85 +387,49 @@
   .book-details-image-container {
     margin-top: auto;
     margin-bottom: 10px;
+
   }
+
+
+  .book-details-and-image-container {
+  display: flex;
+  justify-content: baseline;
+  /* border: solid red; */
+  width: 90%;
+  margin-left: auto;
+
+} 
+
+.title-container {
+  width: 60%;
+}
+
+.price-container {
+    max-width: 300px;
+    }
 
   .textarea {
     width: 60%;
     min-height: 100px;
     border-radius: 10px;
-    
+    background-color: rgb(224, 220, 220);
+    padding: 10px;
   }
 
   .comment {
     color: black;
-    border: 1px solid white;
+    border: .5px solid white;
     border-radius: 10px;
     padding: 5px;
     margin-top: 5px;
-    background-color: whitesmoke;
+    background-color: rgb(224, 220, 220);
+    width: 50%;
   }
 
   .review-name {
     font-weight: 600;
     font-size: large;
   }
-
-  @media screen and (max-width: 900px) {
-    .book-details-container {
-      width: 90%;
-      left: 5%;
-    }
-
-    .book-description, .review-container {
-      padding: 0px;
-      margin-inline: 2px;
-    }
-
-    }
-
-    @media screen and (max-width: 600px) {
-      .book-details-and-image-container {
-        flex-direction: column;
-      }
-
-      .book-details-image-container {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-      }
-
-
-      .comment-form {
-        min-width: 200px;
-        margin-left: 1px !important;
-      }
-
-      .textarea {
-        width: 100%;
-      }
-
-      .book-details-container {
-        width: 100%;
-        left: 0%;
-      }
-  
-      }
-
-      @media screen and (max-width: 450px) {
-        .logo {
-          margin-left: 50%;
-        }
-
-        .card-container {
-          min-height: 12rem;
-          max-height: 12rem;
-          max-width: 9rem;
-        }   
-        .card-image {
-          height: 12rem;
-        }
-    
-        }
 
   
   .border-radius {
@@ -503,10 +438,10 @@
   }
 
   .border-bottom-h {
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid rgb(167, 163, 163);
   }
 
-  .basket:hover, .menu-bars:hover, .logo:hover, .my-profile:hover {
+  .basket:hover, .menu-bars:hover, .logo:hover, .my-profile:hover, .logo-logged:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -524,6 +459,10 @@
     max-width: 40%;
   }
 
+  .checkout-title {
+    max-width: 60%;
+  }
+
   .checkout-item{
     border-bottom: 1px solid black;
     padding: 5px;
@@ -539,36 +478,22 @@
     min-width: 150px;
   }
 
-  @media screen and (max-width: 1210px ) {
-    .pay-button {
-      margin-left: 60%;
-      min-width: 120px;
-    }
-  }
-
-  @media screen and (max-width: 900px ) {
-    .pay-button {
-      margin-left: 20%;
-
-    }
-  }
-
-  @media screen and (max-width: 620px ) {
-    .pay-button {
-      margin-left: 10%;
-
-    }
-
-    .checkout-list {
-      min-width: 300px;
-    }
-  }
-
 
   .list {
-    min-width: 200px;
+    min-width: 100%;
     text-align: center;
     font-size: large;
+    height: 50%;
+
+  }
+
+  .image-and-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .close-icon {
@@ -578,10 +503,16 @@
 
   .signUp-form {
     max-width: 450px;
-    margin:50px auto;
+    margin:20px auto;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px 0 rgb(0 0 0 / 15%), 0 3px 7px 0 rgb(0 0 0 / 15%);
+    border: 1px solid grey;
+    background-color: whitesmoke;
+  }
+
+  .log-out:hover, .user-buttons:hover {
+    border: 1px solid rgb(75, 77, 75);
+    border-radius:5px;
   }
 
   .signUp {
@@ -590,12 +521,13 @@
 
   .login {
     min-height: 86dvh;
+    margin-top: 3%;
   }
 
-  h1, h2 {
+  h1, .login h3 {
     text-align: center;
     max-width: 400px;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: auto;
     margin-top: 80px !important;
   }
@@ -647,16 +579,189 @@
   }
 
   .footer {
-    background-color:rgba(0, 21, 36, .8);
     height: 50px;
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    border-top: 1px solid rgb(186, 180, 180);
   }
 
   .footer-header {
     max-width: 200px;
-    color: white;
+    color: black;
     margin: auto;
     padding-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
+  @media screen and (max-width: 1210px ) {
+    .pay-button {
+      margin-left: 60%;
+      min-width: 120px;
+    }
+
+    .checkout-list {
+      min-width: 50%;
+      border: solid red;
+    }
+  }
+
+  @media screen and (max-width: 900px ) {
+    .pay-button {
+      margin-left: 20%;
+    }
+
+    .book-details-container {
+      width: 90%;
+      left: 5%;
+    }
+
+    .book-description, .review-container {
+      padding: 0px;
+      margin-inline: 2px;
+    }
+
+    .user-main  {
+      flex-wrap: wrap;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .user-details {
+      height: auto;
+      border: none;
+      margin-top: 60px;
+      width: 100%;
+    }
+
+    .image-and-details {
+      justify-content: center;
+      align-items:baseline;
+      flex-direction: row;
+    }   
+
+    .list {
+      min-width: 50%;
+    }
+
+    .user-photo {
+      margin-top: auto;
+      margin-bottom: 5%;
+    } 
+
+    .orders {
+      border: none;
+    }
+
+    .checkout-list {
+      min-width: 60%;
+    }
+
+    .checkout-title {
+      max-width: 55%;
+
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+      .search-container #input  {
+        display: block;
+        min-width: 350px !important;
+      }
+      .image {
+        background-image: url('./images/books-small.jpg')
+      }
+
+    .orders {
+      min-height: 100%;
+      box-shadow: none;
+      overflow-y: scroll;
+    }
+
+    .orders-item-image {
+      max-width: 80px;
+      max-height: 100px;
+    }
+    .orders-table {
+      font-size: .9rem;
+      max-width: 100%;
+    }
+
+    .orders-table thead th {
+      font-size: 1rem ;
+    }
+
+    .checkout-list {
+      min-width: 80%;
+    }
+
+
+  }
+
+  @media screen and (max-width: 620px ) {
+    .pay-button {
+      margin-left: 10%;
+
+    }
+
+    .checkout-list {
+      min-width: 90%;
+    }
+
+    .book-details-and-image-container {
+      flex-direction: column;
+    }
+
+    .book-details-image-container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+
+
+    .comment-form {
+      min-width: 200px;
+      margin-left: 1px !important;
+    }
+
+    .textarea {
+      width: 100%;
+    }
+
+    .book-details-container {
+      width: 100%;
+      left: 0%;
+    }
+
+     .quantity {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    .list {
+      min-width: 100%;
+    } 
+
+    .image-and-details {
+      flex-wrap: wrap;
+    }
+  }
+
+
+      @media screen and (max-width: 450px) {
+        .logo {
+          margin-left: 20%;
+        }
+
+        .card-container {
+          min-height: 12rem;
+          max-height: 12rem;
+          max-width: 9rem;
+        }   
+        .card-image {
+          height: 12rem;
+        }
+        }

@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h2 className="text-dark">Please Login</h2>
+      <h3 className="text-dark">Please Login</h3>
       {/* Here I add the sign up form component */}
       {/* And pass the necessary props  */}
       <SignUpForm

@@ -6,6 +6,14 @@ import { useContext } from "react";
 import DataContext from "../Context/DataContext";
 import { useSelector } from "react-redux";
 import emptyPicture from "../images/empty-picture.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faUser,
+  faAddressCard,
+  faSliders,
+  faGears,
+} from "@fortawesome/free-solid-svg-icons";
 
 // User component
 const User = () => {
@@ -28,55 +36,58 @@ const User = () => {
   return (
     // User container
     <main className="user-main flex-centered">
-      <section className="user-details flex-column">
-        <div className="user-photo">
-          {/* user profile picture */}
-          <img
-            className="profile-picture"
-            src={user && user.photo ? user.photo : emptyPicture}
-            alt="The user"
-          />
+      <section className="user-details ">
+        <div className="image-and-details">
+          <div className="user-photo">
+            {/* user profile picture */}
+            <img
+              className="profile-picture"
+              src={user && user.photo ? user.photo : emptyPicture}
+              alt="The user"
+            />
+          </div>
+          <ul className="list ">
+            <li className="user-details-item">
+              <FontAwesomeIcon className="mr-2" icon={faUser} />
+              {user ? user.name : "name"}
+            </li>
+            <li className="user-details-item">
+              <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
+              {user ? user.username : "username"}
+            </li>
+            <li className="user-details-item">
+              <FontAwesomeIcon className="mr-2" icon={faAddressCard} />
+              {user ? user.type : "user type"}
+            </li>
+            <li className="user-details-item">
+              <button
+                onClick={() => {
+                  setShowForm((prev) => !prev);
+                  setShowPassword(false);
+                }}
+                className="user-buttons w-28 h-10 rounded-2xl "
+              >
+                <FontAwesomeIcon className="mr-2" icon={faSliders} />
+                Edit Details
+              </button>
+            </li>
+            <li className="user-details-item">
+              <button
+                onClick={() => {
+                  setShowPassword(true);
+                  setShowForm((prev) => !prev);
+                }}
+                className="change-password user-buttons w-50 h-10  rounded-2xl "
+              >
+                <FontAwesomeIcon className="mr-2" icon={faGears} />
+                Change Password
+              </button>
+            </li>
+            {/* Edit password button */}
+          </ul>
         </div>
-        <ul className="list">
-          <li className="user-details-item">{user ? user.name : "name"}</li>
-          <li className="user-details-item">
-            {user ? user.username : "username"}
-          </li>
-          <li className="user-details-item">
-            {user ? user.type : "user type"}
-          </li>
-        </ul>
         {/* Edit details button */}
-        <button
-          onClick={() => {
-            setShowForm((prev) => !prev);
-            setShowPassword(false);
-          }}
-          className="user-buttons w-28 h-10 rounded-2xl "
-        >
-          Edit Details
-        </button>
-        {/* Edit password button */}
-        <button
-          onClick={() => {
-            setShowPassword(true);
-            setShowForm((prev) => !prev);
-          }}
-          className="change-password user-buttons w-28 h-10 rounded-2xl "
-        >
-          Change Password
-        </button>
-        {/* logout button */}
-        <button
-          onClick={() => {
-            navigate("/");
-            window.location.reload(false);
-          }}
-          className="user-buttons w-28 h-10 rounded-2xl "
-          type="submit"
-        >
-          Log Out
-        </button>
+        <div>{/* logout button */}</div>
       </section>
       <section className="orders">
         <ul className="d-flex">
@@ -92,9 +103,9 @@ const User = () => {
                 <th className=" text-xl">Image</th>
                 <th className=" text-xl">Title</th>
                 <th className=" text-xl">Author</th>
-                <th className=" text-xl">Quantity</th>
+                <th className="quantity text-xl">Quantity</th>
                 <th className=" text-xl">Price</th>
-                <th className=" text-xl">Date</th>
+                <th className=" date text-xl">Date</th>
               </tr>
             </thead>
             <tbody>
@@ -111,9 +122,9 @@ const User = () => {
                       </th>
                       <th className="title">{book.title}</th>
                       <th>{book.author}</th>
-                      <th>{book.quantity}</th>
+                      <th className="quantity">{book.quantity}</th>
                       <th>{book.price}</th>
-                      <th>
+                      <th className="date">
                         {book.ordered
                           ? book.ordered.substring(0, 10)
                           : dateToString.substring(0, 10)}
@@ -128,7 +139,7 @@ const User = () => {
           </table>
         </div>
       </section>
-      <div className="edit-details absolute ">
+      <div className="edit-details absolute  ">
         {/* Edit details component */}
         <EditDetails
           showForm={showForm}

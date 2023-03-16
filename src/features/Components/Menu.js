@@ -11,7 +11,11 @@ const Menu = ({ menu, setMenu }) => {
 
   const navigate = useNavigate();
   return (
-    <div className={menu ? "menu flex-column" : "hide"}>
+    <div
+      className={
+        menu ? "menu flex-column animate__animated animate__fadeInLeft" : "hide"
+      }
+    >
       <div>
         {/* here are the menu bars icon */}
         <FontAwesomeIcon
@@ -29,6 +33,22 @@ const Menu = ({ menu, setMenu }) => {
         className="mt-5 my-profile"
       >
         <h4>My Profile</h4>
+      </div>
+      <div>
+        {loggedIn ? (
+          <button
+            onClick={() => {
+              navigate("/");
+              window.location.reload(false);
+            }}
+            className=" log-out w-28 h-10 mt-3 mb-4  "
+            type="submit"
+          >
+            Log Out
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

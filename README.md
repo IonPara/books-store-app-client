@@ -21,7 +21,8 @@ The app is built using MongoDB, Express, React, and Node.js (the MERN stack).<br
 <pre>● The app authenticates users using JWT to safely transmit the information between client and server.
 ● The API keys are saved as environment variables.</pre> 
 
-:floppy_disk: The app was deployed on [render.com](https://render.com/)
+:floppy_disk: The front-end of the app was deployed on [Netlify.com](https://netlify.com/)
+:floppy_disk: The back-end of the app was deployed on [Heroku.com](https://heroku.com/)
  <pre>  Back-end and front-end separately to make the app safer and easier to debug.</pre>
 
 The goal of this project is to showcase the ability to build and deploy a full stack application. 
@@ -29,11 +30,11 @@ The goal of this project is to showcase the ability to build and deploy a full s
 ### 🔣 <a id="languages">Technoloogies used </a>:
 
 <p align="left">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="50" height="50"/>
 <img src="https://skillicons.dev/icons?i=express&theme=light"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="50" height="50"/>
 <img src="https://skillicons.dev/icons?i=nodejs&theme=light"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/>
 <img src="https://skillicons.dev/icons?i=redux&theme=light"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="50" height="50"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="50" height="50"/> 
@@ -48,7 +49,7 @@ The goal of this project is to showcase the ability to build and deploy a full s
 
 ## 📘 <a id="setup">Setup</a>:
 
-### You can visualise it by clicking on the link [here](https://just-read.onrender.com/)
+### You can visualise it by clicking on the link [here](https://just-read.netlify.app/)
 
 ### Or by following these steps :point_down:
 
@@ -78,5 +79,3 @@ Open http://localhost:3000 to view it in your browser.
 Created by [IonPara](https://github.com/IonPara).
 
 Feel free to leave your feedback.
-
-

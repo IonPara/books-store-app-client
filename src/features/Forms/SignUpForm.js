@@ -13,11 +13,11 @@ const SignUpForm = ({
   return (
     <Form
       onSubmit={(e) => handleSubmit(e)}
-      className="signUp-form"
+      className="signUp-form "
       encType="multipart/form-data"
     >
       <Form.Group
-        className={showConfirmPassword ? '"mb-2"' : "hide"}
+        className={showConfirmPassword ? '"mb-1"' : "hide"}
         controlId="photo"
       >
         <Form.Label>Photo</Form.Label>
@@ -33,7 +33,7 @@ const SignUpForm = ({
       </Form.Group>
       {/* Here is the name section, I used ternary to hide this section for the login page  */}
       <Form.Group
-        className={showConfirmPassword ? "mb-2 mt-2" : "hide"}
+        className={showConfirmPassword ? "mb-1 mt-2" : "hide"}
         controlId="Name"
       >
         <Form.Label>Name</Form.Label>
@@ -48,7 +48,7 @@ const SignUpForm = ({
         />
       </Form.Group>
       {/* Here is the email section */}
-      <Form.Group className="mb-2 mt-2" controlId="formBasicEmail">
+      <Form.Group className="mb-1 mt-2" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
           value={details.username}

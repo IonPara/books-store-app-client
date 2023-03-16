@@ -13,7 +13,7 @@ const Search = ({ searchBook, setSearchBook, fetchBooks }) => {
         setSearchBook("");
       }}
     >
-      <label className="mb-3">Find Your Favorite Book </label>
+      {/* <label className="mb pt-0">Find Your Favorite Book </label> */}
       <div className="input-container">
         <input
           maxLength={140}
@@ -21,6 +21,7 @@ const Search = ({ searchBook, setSearchBook, fetchBooks }) => {
           id="input"
           type="text"
           name="value"
+          placeholder="Find Your Favorite Book"
           // Set the state of the input to its value
           onChange={(e) => setSearchBook(e.target.value)}
           value={searchBook}

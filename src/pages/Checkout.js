@@ -30,7 +30,7 @@ const Checkout = () => {
           return (
             // /* For each item in the basket create list item  */
             <li className="checkout-item d-flex justify-between" key={uuid()}>
-              <span className="text-base">{item.title}</span>
+              <span className="text-base checkout-title">{item.title}</span>
               <div className="quantity-price-container d-flex justify-between ">
                 <span className="text-base mr-20">{item.quantity} </span>
                 <span className="text-base">£{item.price}</span>
